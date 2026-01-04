@@ -70,6 +70,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bookmarks.wsgi.application'
 
+# Authentication settings
+LOGIN_REDIRECT_URL = "dashboard"
+LOGIN_URL = 'login'
+LOGOUT_ULR = "logout"
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
