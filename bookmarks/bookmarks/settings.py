@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # new app
-    'account.apps.AccountConfig'
+    # 'account.apps.AccountConfig' #in order to use the django built in authentication
+    #views and logic put it in the beginning of the installed apps
 ]
 
 MIDDLEWARE = [
@@ -73,7 +75,7 @@ WSGI_APPLICATION = 'bookmarks.wsgi.application'
 # Authentication settings
 LOGIN_REDIRECT_URL = "dashboard"
 LOGIN_URL = 'login'
-LOGOUT_ULR = "logout"
+LOGOUT_URL = "logout"
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -126,3 +128,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email configurtation
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
