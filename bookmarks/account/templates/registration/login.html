@@ -8,7 +8,9 @@
         Please try again.
         </p>
     {% else %}
-        <p>Please, use the following form to log-in:</p>
+        <p>Please, use the following form to log-in, and if you don't have an account please
+            <a href = '{% url "register" %}'>Register Now!</a>
+        </p>
     {% endif %}
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">
@@ -22,10 +24,10 @@
                 Forgotten your password?
             </a>
         </p>
-        <p>
+        {% comment %} <p>
             <a href="{% url "password_change" %}">
                 wanna change password? press to change
             </a>
-        </p>
+        </p> {% endcomment %}
     </div>
 {% endblock %}
