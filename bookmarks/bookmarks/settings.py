@@ -77,6 +77,10 @@ LOGIN_REDIRECT_URL = "dashboard"
 LOGIN_URL = 'login'
 LOGOUT_URL = "logout"
 
+# Media handling configuration help to manage media uploads and serve media files
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
