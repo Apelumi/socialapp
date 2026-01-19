@@ -24,10 +24,20 @@
                 Forgotten your password?
             </a>
         </p>
+
         {% comment %} <p>
             <a href="{% url "password_change" %}">
                 wanna change password? press to change
             </a>
         </p> {% endcomment %}
+    </div>
+    <div class="social">
+        <ul>
+            <li class="google">
+                <a href="{% url "social:begin" "google-oauth2" %}">
+                    Sign in with Google
+                </a>
+            </li>
+        </ul>
     </div>
 {% endblock %}
